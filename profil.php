@@ -19,59 +19,7 @@ $user = new User($id = NULL, $login = NULL, $password = NULL);
     }
             
 
-//            $sessionLogin = $_SESSION['login'];
-//
-//             if(password_verify($oldpassword, $_SESSION['password'])) {
-//
-//                if($login != $_SESSION['login']) {
-//                    $user = $dbcon->prepare("SELECT login FROM utilisateurs WHERE :login");
-//                    $user->execute(["login" => $login]);
-//                    $verif = $user->rowCount();
-//
-//                    if($verif > 0) {
-//                        $valid = FALSE;
-//                        $err_login = "Ce login est déja pris";
-//                    }
-//
-//                }else if($login === $_SESSION['login']){
-//                    $valid = FALSE;
-//                    $err_login = "Le login  $login  est déja pris.";
-//                }else if(grapheme_strlen($login) < 5) {
-//                    $valid = FALSE;
-//                    $err_login = "Le login doit contenir au minimum 5 caractéres.";
-//                }
-//                else if(grapheme_strlen($login) > 25) {
-//                    $valid = FALSE;
-//                    $err_login = "Le login doit contenir maximum 25 caractéres.";
-//                }
-//
-//
-//                if($password != $confpassword) {
-//                    $valid = FALSE;
-//                    $err_password = "La confirmation du mot de passe n'est pas bonne";
-//                }else if($password === $confpassword) {
-//                    if(preg_match($regex, $password)) {
-//                        $crypt_password = password_hash($password, PASSWORD_DEFAULT);
-//                    }else {
-//                        $valid = FALSE;
-//                        $err_password = "Le mot de passe doit contenir au moins une majuscules, une minuscules un chiffres et un caractére spéciale";
-//                    }
-//                }
-//
-//                if($valid) {
-//                    $user = $dbcon->prepare("UPDATE `utilisateurs` SET (:login, :password) WHERE (:id)");
-//                    $user->execute([
-//                        "login" => $login,
-//                        "password" => $crypt_password,
-//                        "id" => $_SESSION['id']
-//                    ]);
-//                    header("Location: deconnexion.php");
-//                }
-//            }else {
-//                $valid = FALSE;
-//                $err_password = "L'ancien mot de passe n'est pas bon";
-//            }
-//        }
+
 
 
     if($_SESSION != NULL) { 

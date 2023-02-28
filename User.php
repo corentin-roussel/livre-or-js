@@ -70,15 +70,11 @@
             if($verif == 1) {
                 $info = $user->fetch(PDO::FETCH_ASSOC);
                 if(password_verify($password, $info['password'])) {
-                    
-                    // $user = new Userpdo($info['id'], $info['login'], $info['password'], $info['email'], $info['lastname'], $info['firstname']);
-                    // $_SESSION['user'] =  $user;
+
 
                     $_SESSION['id'] = $info['id'];
                     $_SESSION['login'] = $info['login'];
                     $_SESSION['password'] = $info['password'];
-
-                    header("location: livre-or.php");
 
 
                 }else {

@@ -42,7 +42,6 @@ connexion.addEventListener("click", () => {
             div.innerHTML = form;
             let submitCon = document.querySelector("#submitCon");
             let connexionForm = document.querySelector("#connexion-form");
-            console.log(connexionForm);
 
             submitCon.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -52,6 +51,9 @@ connexion.addEventListener("click", () => {
                     body: formConnexion
                 })
                 .then(response => {
+                    if(response.status === 200) {
+                        window.location.href = "livre-or.php"
+                    }
                     return response;
                 })
             })
